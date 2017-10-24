@@ -1,0 +1,60 @@
+* {
+    font-family: 'Quicksand', monospace;
+}
+    div.jumbotron {
+                background-image: url('git-github.png');
+                background-position: top;
+                background-color: #00b2ff;
+                background-repeat: no-repeat;
+            }
+                section {
+                    font-size: 1.4em;
+                }
+                    .colorPrimario {
+                        color: white !important;
+                    }
+                        footer {
+                            background-color: #eee;
+
+                        }
+                            footer div.container img {
+                                display: block;
+                                margin: 3vh auto;
+                            }
+                                p.foo, pre {
+                                    font-size: 1.2em;
+                                }
+                                footer div.container-fluid {
+                                    background-color: #00b2ff;
+                                }
+                                    footer div.container-fluid p {
+                                        margin: .5%;
+                                    }
+                                        kbd {
+                                                padding: 2px 6px;
+                                                font-size: 95%;
+                                                background-color: #02d35f;
+                                                font-weight: bold;
+                                        }
+                                        kbd.black {
+                                            background-color: #565656;
+                                        }
+                                                blockquote p {
+                                                    font-size: .8em;
+                                                }
+                                                    section strong {
+                                                        color: #00b2ff;
+                                                    }
+                                                        .img-responsive {
+                                                            margin: 0 auto;
+                                                            padding: 12px;
+                                                        }
+                                                            h1, h2, h3, h4, h5, h6 {
+                                                                font-family: 'Alegreya+Sans', sans-serif;
+                                                            }
+                                                                span.arrows:before {
+                                                                    content: "\03c";
+                                                                }
+                                                                span.arrows:after {
+                                                                    content: "\03e";
+                                                                }
