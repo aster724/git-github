@@ -4,7 +4,7 @@
     div.jumbotron {
                 background-image: url('git-github.png');
                 background-position: top;
-                background-color: #00b2ff;
+                background-color: #199fff;
                 background-repeat: no-repeat;
             }
                 section {
@@ -25,7 +25,7 @@
                                     font-size: 1.2em;
                                 }
                                 footer div.container-fluid {
-                                    background-color: #00b2ff;
+                                    background-color: #199fff;
                                 }
                                     footer div.container-fluid p {
                                         margin: .5%;
@@ -43,7 +43,7 @@
                                                     font-size: .8em;
                                                 }
                                                     section strong {
-                                                        color: #00b2ff;
+                                                        color: #199fff;
                                                     }
                                                         .img-responsive {
                                                             margin: 0 auto;
