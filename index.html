@@ -55,7 +55,118 @@
                 </ul>
             </p>
 
-            <h3></h3>
+            <h3>¿Que es Git?</h3>
+            <p>
+                <strong>Git</strong> es un <strong>Sistema de Control de Versiones</strong>, de hecho, es el más moderno y usado en el mundo. <strong>Git</strong> fue desarrollado por <strong>Linus Torvalds</strong> en el 2005 y es un proyecto de <strong>Open Source</strong> muy maduro y en constante mantenimiento por la comunidad.
+            </p>
+            <p><strong>Git</strong> es tan confiable que una cantidad asombrosa de proyectos confian en el, incluso la <strong><a href="https://github.com/nasa" target="_blank">NASA</a></strong>.</p>
+
+            <h3>Los tres estados de Git</h3>
+            <p>
+                Lo más importante que se debe conocer de <strong>Git</strong> son sus tres estados principales:
+                <img src="https://git-scm.com/book/en/v2/images/areas.png" alt="Working Directory, Staging Area and Git Repository" class="img-responsive">
+                <!-- Lista desordenada -->
+                <ul>
+                    <li><strong>Working Directory:</strong> Es al lugar donde se trabajan los archivos.</li>
+                    <li><strong>Staging Area:</strong> Es el área de preparación de los archivos que serán registrados en el repositorio.</li>
+                    <li><strong>Git Repository:</strong> Es el lugar donde se almacena el código de forma segura.</li>
+                </ul>
+            </p>
+
+            <h3>¿Que es GitHub?</h3>
+            <p>
+                <strong>GitHub</strong> es una plataforma de alojamiento de código para control de versiones y colaboración. Te permite a ti y a otros trabajar juntos en proyectos desde cualquier lugar.
+                <img src="https://www.aha.io/assets/github.7433692cabbfa132f34adb034e7909fa.png" alt="GitHub" class="img-responsive">
+            </p>
+
+            <h3>Instalación y configuración de Git</h3>
+            <p>
+                Para instalar <strong>Git</strong> en <strong>Linux</strong> especificamente en las distribución de <strong>Debian/Ubuntu</strong> o derivadas, se ejecuta el comando:
+                <!-- Lista desordenada -->
+                <ul>
+                    <li><kbd>apt-get install git</kbd> Instala <strong>Git</strong> en <strong>Linux</strong>.</li>
+                    <li><kbd>git --version</kbd> Muestra la versión de <strong>Git</strong> instalada (este comando ayuda a verificar si <strong>Git</strong> se instaló correctamente).</li>
+                    <li><kbd>git config --global user.email [e@mail.com]</kbd> Establece un correo electronico.</li>
+                    <li><kbd>git config --global user.name [username]</kbd> Establece un nombre de usuario.</li>
+                    <li><kbd>git config --global color.ui [true or false]</kbd> Habilita colores en la UI.</li>
+                </ul>
+            </p>
+            <p>Puedes obtener más información sobre las configuraciones de <strong>Git</strong> en la <a href="https://git-scm.com/" target="_blank">Documentación Oficial de Git</a>.</p>
+
+            <h2>Flujos de trabajo en Git</h2>
+
+            <h3>Creando y Eliminando Repositorios (git init)</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git init [dir-name]</kbd> Crea un repositorio, el nombre de la carpeta es opcional, en caso de colocarlo se creará dicho directorio, en caso de no hacerlo simplemente se creará el repositorio partiendo de la carpeta actual.</li>
+                <li><kbd>rm -rf .git</kbd> Eliminar la carpeta <strong>.git</strong> es lo mismo a eliminar el repositorio (de forma local).</li>
+            </ul>
+
+            <h3>Agregando, quitando y viendo el estatus de archivos (git add | rm | status)</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git init add -A</kbd> Agrega todos los archivos del <strong>Working Directory</strong> al <strong>Staging Area</strong>.</li>
+                <li><kbd>git init add [file or directory]</kbd> Agrega un archivo o carpeta del <strong>Working Directory</strong> al <strong>Staging Area</strong>.</li>
+                <li><kbd>git init add -n [file or directory]</kbd> Simula el agregado de un archivo o directorio al <strong>Staging Area</strong> pero la verdad no lo hace.</li>
+                <li><kbd>git rm --cached [file or directory]</kbd> Elimina un archivo o carpeta del <strong>Staging Area</strong> y lo deja en el <strong>Working Directory</strong>.</li>
+                <li><kbd>git rm --f [file or directory]</kbd> Fuerza la eliminación de un archivo o carpeta del <strong>Staging Area</strong> tanto así que hasta lo borra del <strong>Working Directory</strong>.</li>
+                <li>
+                    <kbd>git status</kbd> Muestra el estado de los archivos o directorios.
+                    <!-- Lista desordenada -->
+                    <ul>
+                        <li><strong class="red">Los archivos que salen en rojo:</strong> Se encuentran en el <strong>Working Directory</strong>.</li>
+                        <li><strong class="green">Los archivos que salen en verde:</strong> Se encuentran en el <strong>Staging Area</strong>.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Confirmando cambios (git commit)</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git commit -m "[description...]"</kbd> Agrega los archivos del <strong>Staging Area</strong> al <strong>Git Repository</strong> con una descripción.</li>
+                <li><kbd>git commit -m --amend</kbd> En caso de equivocarse con algún registro (commit) con la bandera <strong>--amend</strong> se puede rectificar y concatenar los cambios al último commit. Si se usa la bandera <strong>-m "[description...]"</strong> el nuevo mensaje sobrescribirá al anterior, en caso de no hacerlo se mantendrá el antiguo.</li>
+            </ul>
+
+            <h3>Etiquetando confirmaciones (git tag)</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git tag -a [1.x] -m "[descripcion]"</kbd> Registra un tag.</li>
+                <li><kbd>git tag -l</kbd> Lista los tags existentes..</li>
+                <li><kbd>git tag [1.x] [Commit HASH]</kbd> Le registra un tag a un Commit en especifico por medio de su HASH.</li>
+                <li><kbd>git tag -f -a [1.x] -m "[description...]" [Commit HASH]</kbd> Permite renombrar un tag.</li>
+                <li><kbd>git tag -d [1.x]</kbd> Elimina un tag.</li>
+            </ul>
+
+            <h3>Revisando la historia de nuestro proyecto (git log)</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git log</kbd> Muestra el historial de los registros (commits) del proyecto con sus respectivos autores, hora especifica y descripciones (en caso de tenerlo).</li>
+                <li><kbd>git config --global alias.[superlog] "log ..."</kbd> Permite agregarle alias a <code>git log</code></li>
+                <p>
+<pre>
+    git config --global alias.superlog "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+</pre>
+                </p>
+            </ul>
+
+            <h3>Revisando los cambios entre versiones (git diff)</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git diff [Commit HASH]</kbd> Muestra los cambios que se han realizados entre <strong>el estado actual</strong> y <strong>el commit</strong> especificado por su HASH.</li>
+                <li><kbd>git diff [Commit HASH #1] [Commit HASH #2]</kbd> Muestra los cambios que se han realizados entre <strong>el commit #1</strong> y <strong>el commit #2</strong> especificado por su HASH.</li>
+            </ul>
+            <p>Cuando las comparaciones salen en <strong class="red">rojo significa que se eliminaron cosas</strong> en cambio si sale en <strong class="green">verde significa que se agregaron cosas</strong>.</p>
+
+            <h3>Revertir cambios en Git</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git reset --soft [HASH]</kbd> Partiendo de un Commit identificado por su HASH, elimina todos los Commits futuros a el y <strong class="green">mantiene</strong> todos esos cambios (registrados en los Commits eliminados) en el <strong>Staging Area</strong>.</li>
+                <li><kbd>git reset --mixed [HASH]</kbd> Partiendo de un Commit identificado por su HASH, elimina todos los Commits futuros a el y <strong class="green">mantiene</strong> todos esos cambios (registrados en los Commits eliminados) en el <strong>Working Directory</strong>.</li>
+                <li><kbd>git reset --hard [HASH]</kbd> Partiendo de un Commit identificado por su HASH, elimina todos los Commits futuros a el y <strong class="red">no mantiene</strong> los cambios ni en el <strong>Staging Area</strong> ni en el <strong>Working Directory</strong> de los Commits eliminados.</li>
+            </ul>
+
+            <h2>Múltiples entornos de trabajo</h2>
+
         </section>
 
         <section>

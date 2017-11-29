@@ -33,7 +33,7 @@
                                         kbd {
                                                 padding: 2px 6px;
                                                 font-size: 95%;
-                                                background-color: #02d35f;
+                                                background-color: #919191;
                                                 font-weight: bold;
                                         }
                                         kbd.black {
@@ -44,6 +44,12 @@
                                                 }
                                                     section strong {
                                                         color: #199fff;
+                                                    }
+                                                    section strong.red {
+                                                        color: red;
+                                                    }
+                                                     section strong.green {
+                                                        color: green;
                                                     }
                                                         .img-responsive {
                                                             margin: 0 auto;
