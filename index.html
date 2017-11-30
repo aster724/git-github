@@ -167,6 +167,50 @@
 
             <h2>Múltiples entornos de trabajo</h2>
 
+            <h3>Múltiples variantes del repositorio (git branch)</h3>
+            <p>Una rama es una línea alterna del tiempo (del proyecto). La rama por defecto es <code>master</code>, la rama de <strong>GitHub Pages</strong> es <code>gh-pages</code> y cuando se trabaja como colaborador se identifica el proyecto principal con la rama <code>upstream</code>.</p>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git branch [name-branch]</kbd> Crea una nueva rama.</li>
+                <li><kbd>git checkout -b [name-branch]</kbd> Crea una nueva rama y se posiciona en ella.</li>
+                <li><kbd>git branch -l</kbd> Lista todos las ramas que existen.</li>
+                <li><kbd>git branch -d [name-branch]</kbd> Elimina una rama. Con <code>-D</code> se fuerza el borrado.</li>
+                <li><kbd>git branch -m [old-name-branch] [new-name-branch]</kbd> Permite renombrar una nueva rama.</li>
+            </ul>
+
+            <h3> Moviéndonos entre ramas y versiones (git checkout)</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git checkout [name-branch or commit-HASH]</kbd> Permite moverse entre ramas o entre los Commits de una rama.</li>
+            </ul>
+
+            <h3>Mezclando ramas y resolviendo conflictos</h3>
+            <p>
+                En <strong>Git</strong> se pueden mezclar ramas, al realizar una fusión ocurrirá que la <strong class="green">operación se realizó con éxito</strong> (<strong>Fast-Forward</strong>) o que <strong class="red">la operación presentó unos conflictos</strong> (<strong>Manual Merge</strong>) ¿no te quedó claro?
+                <!-- Lista desordenada -->
+                <ul>
+                    <li><strong class="green">Fast-Forward:</strong> Es lo que ocurre cuando ocurre un cambio en una rama y al fusionarla con la otra no presenta conflictos ¿por qué no presenta problemas? Porque solo en una rama ocurrió un cambio en la misma línea de código por lo tanto se agrega la nueva y se reemplaza la vieja.</li>
+                    <li>
+                        <strong class="red">Manual Merge:</strong> Es lo que ocurre cuando en ambas ramas se realizaran modificaciones afectando las mismas líneas de código ¿que pasa con esto? Sencillo, <strong>Git</strong> te pedirá que elijas con cual fragmento de código (cambio) te quedarás y lo dividirá con unas flechas, por ejemplo:
+                        <p>
+<pre>
+     <<<<<< <strong>[Rama A]</strong>
+     <strong class="red">[Aquí estará el código de la modificación  número 1]</strong>
+     =====
+     <strong class="red">[Aquí estará el código de la modificación  número 2]</strong>
+     >>>>> <strong>[Rama B]</strong>
+</pre>
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git merge [name-branch]</kbd> Fusiona una rama con la actual (con la rama en la que nos encontramos posicionados).</li>
+            </ul>
+
+            <h3></h3>
+
         </section>
 
         <section>
