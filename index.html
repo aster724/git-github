@@ -194,7 +194,7 @@
                         <strong class="red">Manual Merge:</strong> Es lo que ocurre cuando en ambas ramas se realizaran modificaciones afectando las mismas líneas de código ¿que pasa con esto? Sencillo, <strong>Git</strong> te pedirá que elijas con cual fragmento de código (cambio) te quedarás y lo dividirá con unas flechas, por ejemplo:
                         <p>
 <pre>
-     <<<<<< <strong>[Rama A]</strong>
+     <<<<< <strong>[Rama A]</strong>
      <strong class="red">[Aquí estará el código de la modificación  número 1]</strong>
      =====
      <strong class="red">[Aquí estará el código de la modificación  número 2]</strong>
@@ -209,8 +209,49 @@
                 <li><kbd>git merge [name-branch]</kbd> Fusiona una rama con la actual (con la rama en la que nos encontramos posicionados).</li>
             </ul>
 
-            <h3></h3>
+            <h3>Guardando cambios temporalmente (git stash)</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git stash</kbd> Guarda el status de forma temporal (pero los archivos deben estar en el <strong>Staging Area</strong>).</li>
+                <li><kbd>git stash list</kbd> Lista los Stashes.</li>
+                <li><kbd>git stash drop stash@{#}</kbd> Elimina un Stash por medio de su ID.</li>
+                <li><kbd>git stash apply</kbd> Aplica el último Stash creado.</li>
+            </ul>
 
+            <h3>Cherry pick eligiendo commits selectivamente</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git cherry pick [HASH]</kbd> Mueve un Commit hecho en una rama (Branch A) a otra rama (Branch B).</li>
+            </ul>
+            
+            <h2>GitHub</h2>
+
+            <h3>Clonando repositorios remotos (git clone/fork)</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git clone [SSH/HTTPS]</kbd> Clona un repositorio desde GitHub a nuestro equipo local.</li>
+            </ul>
+
+            <h3>Añadiendo un repositorio remoto a uno local (git remote)</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git remote add [origin] [SSH/HTTPS]</kbd> Conecta un repositorio con nuestro equipo local.</li>
+                <li><kbd>git remote -v</kbd> Lista las conexiones existentes.</li>
+                <li><kbd>git remote remove [origin]</kbd> Elimina una conexión con algún repositorio.</li>
+            </ul>
+
+            <h3>Trayendo cambios desde el repositorio remoto (git fetch/pull)</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git fetch [origin]</kbd> Descarga cambios de <strong>GitHub</strong> y crea una rama llamada <code>origin/master</code> que luego se debe fusionar con la <code>master</code> de nuestro entorno local.</li>
+                <li><kbd>git pull [origin]</kbd> Descarga cambios de <strong>GitHub</strong> y los fusiona automáticamente la rama espejo <code>origin/master</code> a la rama <code>master</code> de nuestro entorno local.</li>
+            </ul>
+
+            <h3>Enviando cambios al repositorio remoto</h3>
+            <!-- Lista desordenada -->
+            <ul>
+                <li><kbd>git push -u [origin] [name-branch]</kbd> Empujar una rama a el repositorio remoto en <strong>GitHub</strong>.</li>
+            </ul>
         </section>
 
         <section>
