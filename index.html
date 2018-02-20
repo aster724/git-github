@@ -186,7 +186,7 @@
 
             <h3>Mezclando ramas y resolviendo conflictos</h3>
             <p>
-                En <strong>Git</strong> se pueden mezclar ramas, al realizar una fusión ocurrirá que la <strong class="green">operación se realizó con éxito</strong> (<strong>Fast-Forward</strong>) o que <strong class="red">la operación presentó unos conflictos</strong> (<strong>Manual Merge</strong>) ¿no te quedó claro?
+                En <strong>Git</strong> se pueden mezclar ramas, al realizar una fusión ocurrirá que la <strong class="green">operación se realizó con éxito</strong> (<strong>Fast-Forward</strong>) o que <strong class="red">la operación presentó unos conflictos</strong> (<strong>Manual Merge</strong>) ¿no te quedó claro?.
                 <!-- Lista desordenada -->
                 <ul>
                     <li><strong class="green">Fast-Forward:</strong> Es lo que ocurre cuando ocurre un cambio en una rama y al fusionarla con la otra no presenta conflictos ¿por qué no presenta problemas? Porque solo en una rama ocurrió un cambio en la misma línea de código por lo tanto se agrega la nueva y se reemplaza la vieja.</li>
@@ -218,10 +218,10 @@
                 <li><kbd>git stash apply</kbd> Aplica el último Stash creado.</li>
             </ul>
 
-            <h3>Cherry pick eligiendo commits selectivamente</h3>
+            <h3>Cherry-Pick moviendo commits selectivamente de una rama a otra</h3>
             <!-- Lista desordenada -->
             <ul>
-                <li><kbd>git cherry pick [HASH]</kbd> Mueve un Commit hecho en una rama (Branch A) a otra rama (Branch B).</li>
+                <li><kbd>git cherry-pick [commit HASH] [name-branch]</kbd> Mueve un commit hecho en una rama (Branch A), a otra rama (Branch B).</li>
             </ul>
             
             <h2>GitHub</h2>
@@ -250,7 +250,8 @@
             <h3>Enviando cambios al repositorio remoto</h3>
             <!-- Lista desordenada -->
             <ul>
-                <li><kbd>git push -u [origin] [name-branch]</kbd> Empujar una rama a el repositorio remoto en <strong>GitHub</strong>.</li>
+                <li><kbd>git push -u [origin] [name-branch]</kbd> Empujar una rama al repositorio remoto en <strong>GitHub</strong>.</li>
+                <li><kbd>git push [origin] [name-branch] --tags</kbd> Enviar los TAGS al repositorio remoto en <strong>GitHub</strong>.</li>
             </ul>
         </section>
 
